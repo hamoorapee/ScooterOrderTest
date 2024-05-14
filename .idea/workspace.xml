@@ -4,23 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2008af5-5aca-4ab2-8319-c03a3f2d0baf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/pages/MainPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/pages/OrderScooterPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/ui/MainPageTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/ui/OrderScooterTests.java" afterDir="false" />
+    <list default="true" id="f2008af5-5aca-4ab2-8319-c03a3f2d0baf" name="Changes" comment="Added MainPageTests, MainPage.java and empty OrderScooterTests and OrderScooterPage.java">
+      <change afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/pages/components/CalendarComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/pages/OrderScooterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/pages/OrderScooterPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/ui/MainPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/ui/MainPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/ui/OrderScooterTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/ui/OrderScooterTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +86,8 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Gradle.MainPageTest.importantTasksTest.executor": "Debug",
     "Gradle.MainPageTests.importantTasksTest.executor": "Debug",
+    "Gradle.OrderScooterTests.OrderScooterTest.executor": "Run",
+    "Gradle.Test3 [allureReport].executor": "Run",
     "Gradle.Test3 [allureServe].executor": "Run",
     "Gradle.Test3 [downloadAllure].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -108,31 +100,7 @@
     "onboarding.tips.debug.path": "D:/programming/Lessons/Test3/src/main/java/org/example/Main.java"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.MainPageTests.importantTasksTest">
-    <configuration name="MainPageTest.importantTasksTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;qa.scooter.yandex.practicum.com.ui.MainPageTest.importantTasksTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.OrderScooterTests.OrderScooterTest">
     <configuration name="MainPageTests.importantTasksTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -155,6 +123,52 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="OrderScooterTests.OrderScooterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;qa.scooter.yandex.practicum.com.ui.OrderScooterTests.OrderScooterTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Test3 [allureReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="allureReport" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="Test3 [allureServe]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -203,10 +217,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MainPageTests.importantTasksTest" />
+        <item itemvalue="Gradle.OrderScooterTests.OrderScooterTest" />
         <item itemvalue="Gradle.Test3 [allureServe]" />
+        <item itemvalue="Gradle.Test3 [allureReport]" />
         <item itemvalue="Gradle.Test3 [downloadAllure]" />
-        <item itemvalue="Gradle.MainPageTest.importantTasksTest" />
+        <item itemvalue="Gradle.MainPageTests.importantTasksTest" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +241,20 @@
       <option name="presentableId" value="Default" />
       <updated>1715623674453</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added MainPageTests, MainPage.java and empty OrderScooterTests and OrderScooterPage.java">
+      <option name="closed" value="true" />
+      <created>1715711993668</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715711993668</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added MainPageTests, MainPage.java and empty OrderScooterTests and OrderScooterPage.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added MainPageTests, MainPage.java and empty OrderScooterTests and OrderScooterPage.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

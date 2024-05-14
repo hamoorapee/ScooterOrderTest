@@ -5,10 +5,7 @@ import qa.scooter.yandex.practicum.com.BaseTest;
 
 import static com.codeborne.selenide.Selenide.open;
 
-
 public class MainPageTests extends BaseTest {
-    //prepare
-    //test
 
     @Test
     public void importantTasksTest() {
