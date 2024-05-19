@@ -22,6 +22,7 @@ test {
     useJUnitPlatform()
     systemProperty 'allure.results.directory', file('build/allure-results')
 }
+
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
