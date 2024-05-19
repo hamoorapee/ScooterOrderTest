@@ -87,14 +87,14 @@ public class OrderScooterPage {
         return this;
     }
 
-    @Step("Установка значения даты")
-    public OrderScooterPage calendarSetDate(String day, String month, String year) {
+    @Step("Установка даты в календаре: '{day}', '{month}', '{year}'")
+    public OrderScooterPage setDataInCalendar(String day, String month, String year) {
         calendarComponent.setDate(day, month, year);
         return this;
     }
 
     @Step("Клик на поле и установка количества суток аренды")
-    public OrderScooterPage chooseRentalPeriod(int periodInDays) {
+    public OrderScooterPage clickAndChooseRentalPeriod(int periodInDays) {
         periodInDays--;
         rentalPeriodArrowBtn.click();
         rentalPeriods.get(periodInDays).click();
@@ -108,19 +108,19 @@ public class OrderScooterPage {
         return this;
     }
 
-    @Step("Установка значения комментария для курьера")
-    public OrderScooterPage setCommentForCourier(String commentForCourier) {
-        commentForCourierInput.setValue(commentForCourier);
+    @Step("Установка значения комментария для курьера: '{comment}'")
+    public OrderScooterPage setCommentForCourier(String comment) {
+        commentForCourierInput.setValue(comment);
         return this;
     }
 
-    @Step("Клик на кнопку заказа в конце заполнения формы")
+    @Step("Клик по кнопке заказа в конце заполнения формы")
     public OrderScooterPage approveOrderInFilledForm() {
         orderButtonInFilledForm.get(1).click();
         return this;
     }
 
-    @Step("Клик на кнопку 'Да' после заполнения и нажатия кнопки заказа")
+    @Step("Клик по кнопке 'Да' после заполнения и нажатия кнопки заказа")
     public OrderScooterPage clickYesAtTheFinalOfForm() {
         orderButtonInFullFilledForm.first().click();
         return this;
@@ -150,7 +150,7 @@ public class OrderScooterPage {
         return this;
     }
 
-    @Step("Клик на лого Яндекс Самокат")
+    @Step("Клик по логотипу 'Самокат'")
     public OrderScooterPage clickToLogo() {
         logoLocator.click();
         return this;
