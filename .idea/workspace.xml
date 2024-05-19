@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2008af5-5aca-4ab2-8319-c03a3f2d0baf" name="Changes" comment="Added OrderScooterPage.java first half">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="f2008af5-5aca-4ab2-8319-c03a3f2d0baf" name="Changes" comment="Finished project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/pages/OrderScooterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/pages/OrderScooterPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/pages/components/CalendarComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/pages/components/CalendarComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/ui/MainPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/ui/MainPageTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/ui/OrderScooterTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/ui/OrderScooterTests.java" afterDir="false" />
     </list>
@@ -273,13 +271,38 @@
       <option name="project" value="LOCAL" />
       <updated>1715721718197</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added OrderScooterPage.java first half">
+      <option name="closed" value="true" />
+      <created>1716118415968</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716118415968</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added OrderScooterPage.java first half">
+      <option name="closed" value="true" />
+      <created>1716118595816</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716118595816</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Finished project">
+      <option name="closed" value="true" />
+      <created>1716118654580</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716118654580</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added MainPageTests, MainPage.java and empty OrderScooterTests and OrderScooterPage.java" />
     <MESSAGE value="Added OrderScooterPage.java first half" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added OrderScooterPage.java first half" />
+    <MESSAGE value="Finished project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

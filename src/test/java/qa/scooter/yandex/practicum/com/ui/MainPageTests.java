@@ -1,13 +1,15 @@
 package qa.scooter.yandex.practicum.com.ui;
 
+import jdk.jfr.Description;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import qa.scooter.yandex.practicum.com.BaseTest;
-
-import static com.codeborne.selenide.Selenide.open;
 
 public class MainPageTests extends BaseTest {
 
     @Test
+    @DisplayName("Проверка вопросов 'Вопросы о важном'")
+    @Description("Проверка выпадающих значений из вопросов после клика и корректность их содержания")
     public void importantTasksTest() {
         mainPage.askOpen(1)
                 .checkRespond("Сутки — 400 рублей. Оплата курьеру — ")

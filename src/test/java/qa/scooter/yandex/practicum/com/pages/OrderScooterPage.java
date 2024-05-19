@@ -25,6 +25,7 @@ public class OrderScooterPage {
             orderButtonInFilledForm = $$("button.Button_Button__ra12g.Button_Middle__1CSJM"),
             orderButtonInFullFilledForm = $$("div.Order_Modal__YZ-d3 button.Button_Button__ra12g.Button_Middle__1CSJM:last-of-type"),
             errorMessages = $$(".Input_ErrorMessage__3HvIb");
+
     private SelenideElement
             subwayStationInput = $(".select-search__value"),
             orderContinueButton = $(byText("Далее")),
@@ -37,62 +38,62 @@ public class OrderScooterPage {
             orderMetroErrorMessage = $(".Order_MetroError__1BtZb"),
             orderHeaderModal = $(".Order_ModalHeader__3FDaJ");
 
-    @Step("Кликает на кнопку заказа в шапке сайта")
+    @Step("Клик на кнопку заказа в шапке сайта")
     public OrderScooterPage clickHeaderButtonOrder() {
         orderButtons.get(0).click();
         return this;
     }
 
-    @Step("Кликает на кнопку заказа в сайте")
+    @Step("Клик на кнопку заказа в сайте")
     public OrderScooterPage clickBigButtonOrder() {
         orderButtons.get(1).click();
         return this;
     }
 
-    @Step("Задаем значение имени в форму")
+    @Step("Установка значения имени в форму")
     public OrderScooterPage setFirstName(String name) {
         inputContainers.get(0).setValue(name);
         return this;
     }
 
-    @Step("Задаем значение фамилии в форму")
+    @Step("Установка значения фамилии в форму")
     public OrderScooterPage setSecondName(String name) {
         inputContainers.get(1).setValue(name);
         return this;
     }
 
-    @Step("Задаем значение адреса в форму")
+    @Step("Установка значения адреса в форму")
     public OrderScooterPage setAddress(String address) {
         inputContainers.get(2).setValue(address);
         return this;
     }
 
-    @Step("Задаем значение станции метро в форму")
+    @Step("Установка значения станции метро в форму")
     public OrderScooterPage setSubwayStation(String station) {
         subwayStationInput.click();
         metroInputContainer.findBy(text(station)).click();
         return this;
     }
 
-    @Step("Задаем значение номера в форму")
+    @Step("Установка значения номера в форму")
     public OrderScooterPage setNum(String num) {
         inputContainers.get(3).setValue(num);
         return this;
     }
 
-    @Step("Нажимаем кнопку продолжить в окне первой формы")
+    @Step("Клик на кнопку 'Продолжить' в окне первой формы")
     public OrderScooterPage clickOrderContinue() {
         orderContinueButton.click();
         return this;
     }
 
-    @Step("Задаем значение даты")
+    @Step("Установка значения даты")
     public OrderScooterPage calendarSetDate(String day, String month, String year) {
         calendarComponent.setDate(day, month, year);
         return this;
     }
 
-    @Step("Кликаем на поле и выбираем количество суток аренды")
+    @Step("Клик на поле и установка количества суток аренды")
     public OrderScooterPage chooseRentalPeriod(int periodInDays) {
         periodInDays--;
         rentalPeriodArrowButton.click();
@@ -100,82 +101,82 @@ public class OrderScooterPage {
         return this;
     }
 
-    @Step("Выбирает цвет самоката")
+    @Step("Установка значения цвета самоката")
     public OrderScooterPage chooseScooterColor(int colorNum) {
         colorNum--;
         scooterColorCheckboxLabel.get(colorNum).click();
         return this;
     }
 
-    @Step("Выбирает цвет самоката")
+    @Step("Установка значения комментария для курьера")
     public OrderScooterPage setCommentForCourier(String commentForCourier) {
         commentForCourierInput.setValue(commentForCourier);
         return this;
     }
 
-    @Step("Нажимает на кнопку заказа в конце заполнения формы")
+    @Step("Клик на кнопку заказа в конце заполнения формы")
     public OrderScooterPage approveOrderInFilledForm() {
         orderButtonInFilledForm.get(1).click();
         return this;
     }
 
-    @Step("Нажимает на кнопку 'Да' после заполнения и нажатия кнопки заказа")
+    @Step("Клик на кнопку 'Да' после заполнения и нажатия кнопки заказа")
     public OrderScooterPage clickYesAtTheFinalOfForm() {
         orderButtonInFullFilledForm.first().click();
         return this;
     }
 
-    @Step("Проверяет подтверждение создания заказа")
+    @Step("Проверка подтверждения создания заказа")
     public OrderScooterPage checkApproveCreatedOrder() {
         orderHeaderModal.shouldHave(text("Заказ оформлен"));
         return this;
     }
 
-    @Step("Забирает номер заказа")
+    @Step("Получение номера заказа")
     public OrderScooterPage getOrderNumber() {
         orderNumber = orderFullText.getText().replaceAll("\\D+", "");
         return this;
     }
 
-    @Step("Кликает на кнопку Посмотреть Статус")
+    @Step("Клик на кнопку 'Посмотреть Статус'")
     public OrderScooterPage clickCheckOrder() {
         orderNextButton.click();
         return this;
     }
 
-    @Step("Кликает на кнопку Посмотреть Статус")
+    @Step("Проверка номера заказа на финальной странице заказа")
     public OrderScooterPage checkOrderNumber() {
         orderNumInContainer.shouldHave(value(orderNumber));
         return this;
     }
 
-    @Step("Кликает на лого Яндекс Самокат")
+    @Step("Клик на лого Яндекс Самокат")
     public OrderScooterPage clickToLogo() {
         logoLocator.click();
         return this;
     }
 
-    @Step("Проверяет ссылку перенаправления")
+    @Step("Проверка ссылки перенаправления")
     public OrderScooterPage checkUrl() {
         String currentUrl = webdriver().driver().url();
         assertEquals(BASE_URL+"/", currentUrl);
         return this;
     }
 
-    @Step("Проверяет появление сообщений об ошибках")
+    @Step("Проверка появление сообщений об ошибках")
     public OrderScooterPage checkErrorMessages() {
         errorMessages.filter(visible).shouldHave(size(4));
         orderMetroErrorMessage.shouldBe(visible);
         return this;
     }
 
-    @Step("Проверяет готовность принять заказ")
+    @Step("Проверка возможности принять заказ")
     public OrderScooterPage checkAvailabilityCreateOrder(){
         orderHeaderModal.shouldBe(hidden);
         return this;
     }
 
-    @Step("Очищает поле ввода даты")
+    @Step("Очистка поля ввода даты")
     public OrderScooterPage cleanDateContainer(){
         calendarComponent.cleanDate();
         return this;
