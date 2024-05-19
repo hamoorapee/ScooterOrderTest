@@ -12,12 +12,12 @@ public class CalendarComponent {
     @Step("Установка даты")
     public void setDate(String day, String month, String year) {
         datePickerContainerLocator.click();
-        datePickerContainerLocator.append(day+"."+month+"."+year);
+        datePickerContainerLocator.append(day + "." + month + "." + year);
         datePickerContainerLocator.sendKeys(Keys.ENTER);
     }
 
     @Step("Очистка поля ввода даты")
-    public void cleanDate(){
+    public void cleanDate() {
         datePickerContainerLocator.doubleClick();
         datePickerContainerLocator.clear();
     }

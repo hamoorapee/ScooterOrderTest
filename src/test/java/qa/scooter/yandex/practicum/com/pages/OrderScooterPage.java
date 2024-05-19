@@ -18,6 +18,10 @@ public class OrderScooterPage {
     CalendarComponent calendarComponent = new CalendarComponent();
 
     private SelenideElement
+            firstNameInput = $("[placeholder='* Имя']"),
+            lastNameInput = $("[placeholder='* Фамилия']"),
+            addressInput = $("[placeholder='* Адрес: куда привезти заказ"),
+            phoneNumInput = $("[placeholder='* Телефон: на него позвонит курьер']"),
             subwayStationInput = $(".select-search__value"),
             orderContinueBtn = $x("//*[contains(text(),'Далее')]"),
             rentalPeriodArrowBtn = $(".Dropdown-arrow"),
@@ -29,9 +33,9 @@ public class OrderScooterPage {
             orderMetroErrorMessage = $(".Order_MetroError__1BtZb"),
             orderHeaderModal = $(".Order_ModalHeader__3FDaJ");
 
-    private ElementsCollection orderButtons = $$(byText("Заказать")),
-            inputContainers = $$("[type='text']").filterBy(visible),
-            metroInputContainer = $$("[role='menuitem']"),
+    private ElementsCollection
+            orderButtons = $$(byText("Заказать")),
+            metroInput = $$("[role='menuitem']"),
             rentalPeriods = $$(".Dropdown-option"),
             scooterColorCheckboxLabel = $$("label"),
             orderButtonInFilledForm = $$("button.Button_Button__ra12g.Button_Middle__1CSJM"),
@@ -52,32 +56,32 @@ public class OrderScooterPage {
 
     @Step("Установка значения имени в форму")
     public OrderScooterPage setFirstName(String name) {
-        inputContainers.get(0).setValue(name);
+        firstNameInput.setValue(name);
         return this;
     }
 
     @Step("Установка значения фамилии в форму")
-    public OrderScooterPage setSecondName(String name) {
-        inputContainers.get(1).setValue(name);
+    public OrderScooterPage setLastName(String name) {
+        lastNameInput.setValue(name);
         return this;
     }
 
     @Step("Установка значения адреса в форму")
     public OrderScooterPage setAddress(String address) {
-        inputContainers.get(2).setValue(address);
+        addressInput.setValue(address);
         return this;
     }
 
     @Step("Установка значения станции метро в форму")
     public OrderScooterPage setSubwayStation(String station) {
         subwayStationInput.click();
-        metroInputContainer.findBy(text(station)).click();
+        metroInput.findBy(text(station)).click();
         return this;
     }
 
     @Step("Установка значения номера в форму")
     public OrderScooterPage setNum(String num) {
-        inputContainers.get(3).setValue(num);
+        phoneNumInput.setValue(num);
         return this;
     }
 
@@ -159,7 +163,7 @@ public class OrderScooterPage {
     @Step("Проверка ссылки перенаправления")
     public OrderScooterPage checkUrl() {
         String currentUrl = webdriver().driver().url();
-        assertEquals(BASE_URL+"/", currentUrl);
+        assertEquals(BASE_URL + "/", currentUrl);
         return this;
     }
 
@@ -171,13 +175,13 @@ public class OrderScooterPage {
     }
 
     @Step("Проверка возможности принять заказ")
-    public OrderScooterPage checkAvailabilityCreateOrder(){
+    public OrderScooterPage checkAvailabilityCreateOrder() {
         orderHeaderModal.shouldBe(hidden);
         return this;
     }
 
     @Step("Очистка поля ввода даты")
-    public OrderScooterPage cleanDateContainer(){
+    public OrderScooterPage cleanDateContainer() {
         calendarComponent.cleanDate();
         return this;
     }
