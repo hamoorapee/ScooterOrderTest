@@ -2,8 +2,6 @@ package qa.scooter.yandex.practicum.com;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import qa.scooter.yandex.practicum.com.pages.MainPage;
 import qa.scooter.yandex.practicum.com.pages.OrderScooterPage;
 
