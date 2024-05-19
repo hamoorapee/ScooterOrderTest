@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2008af5-5aca-4ab2-8319-c03a3f2d0baf" name="Changes" comment="Added MainPageTests, MainPage.java and empty OrderScooterTests and OrderScooterPage.java">
-      <change afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/pages/components/CalendarComponent.java" afterDir="false" />
+    <list default="true" id="f2008af5-5aca-4ab2-8319-c03a3f2d0baf" name="Changes" comment="Added OrderScooterPage.java first half">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/pages/OrderScooterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/pages/OrderScooterPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/pages/components/CalendarComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/pages/components/CalendarComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/ui/MainPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/ui/MainPageTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/ui/OrderScooterTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/qa/scooter/yandex/practicum/com/ui/OrderScooterTests.java" afterDir="false" />
     </list>
@@ -63,11 +64,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -85,11 +90,16 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Gradle.MainPageTest.importantTasksTest.executor": "Debug",
-    "Gradle.MainPageTests.importantTasksTest.executor": "Debug",
+    "Gradle.MainPageTests.importantTasksTest.executor": "Run",
     "Gradle.OrderScooterTests.OrderScooterTest.executor": "Run",
+    "Gradle.OrderScooterTests.OrderScooterTestInHighButton.executor": "Run",
+    "Gradle.OrderScooterTests.OrderScooterTestInMiddleButton.executor": "Run",
+    "Gradle.OrderScooterTests.logoLinkToMain.executor": "Run",
+    "Gradle.OrderScooterTests.negativeCheck.executor": "Run",
     "Gradle.Test3 [allureReport].executor": "Run",
     "Gradle.Test3 [allureServe].executor": "Run",
     "Gradle.Test3 [downloadAllure].executor": "Run",
+    "Gradle.Test3 [test].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -100,31 +110,7 @@
     "onboarding.tips.debug.path": "D:/programming/Lessons/Test3/src/main/java/org/example/Main.java"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.OrderScooterTests.OrderScooterTest">
-    <configuration name="MainPageTests.importantTasksTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;qa.scooter.yandex.practicum.com.ui.MainPageTests.importantTasksTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.OrderScooterTests.negativeCheck">
     <configuration name="OrderScooterTests.OrderScooterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -149,79 +135,109 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Test3 [allureReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OrderScooterTests.OrderScooterTestInHighButton" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="allureReport" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;qa.scooter.yandex.practicum.com.ui.OrderScooterTests.OrderScooterTestInHighButton&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Test3 [allureServe]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OrderScooterTests.OrderScooterTestInMiddleButton" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="allureServe" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;qa.scooter.yandex.practicum.com.ui.OrderScooterTests.OrderScooterTestInMiddleButton&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Test3 [downloadAllure]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OrderScooterTests.logoLinkToMain" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="downloadAllure" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;qa.scooter.yandex.practicum.com.ui.OrderScooterTests.logoLinkToMain&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="OrderScooterTests.negativeCheck" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;qa.scooter.yandex.practicum.com.ui.OrderScooterTests.negativeCheck&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.OrderScooterTests.negativeCheck" />
+        <item itemvalue="Gradle.OrderScooterTests.OrderScooterTestInMiddleButton" />
+        <item itemvalue="Gradle.OrderScooterTests.logoLinkToMain" />
+        <item itemvalue="Gradle.OrderScooterTests.OrderScooterTestInHighButton" />
         <item itemvalue="Gradle.OrderScooterTests.OrderScooterTest" />
-        <item itemvalue="Gradle.Test3 [allureServe]" />
-        <item itemvalue="Gradle.Test3 [allureReport]" />
-        <item itemvalue="Gradle.Test3 [downloadAllure]" />
-        <item itemvalue="Gradle.MainPageTests.importantTasksTest" />
       </list>
     </recent_temporary>
   </component>
@@ -249,12 +265,21 @@
       <option name="project" value="LOCAL" />
       <updated>1715711993668</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added OrderScooterPage.java first half">
+      <option name="closed" value="true" />
+      <created>1715721718196</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715721718197</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added MainPageTests, MainPage.java and empty OrderScooterTests and OrderScooterPage.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added MainPageTests, MainPage.java and empty OrderScooterTests and OrderScooterPage.java" />
+    <MESSAGE value="Added OrderScooterPage.java first half" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added OrderScooterPage.java first half" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

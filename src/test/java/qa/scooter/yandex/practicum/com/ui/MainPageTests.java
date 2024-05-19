@@ -9,7 +9,6 @@ public class MainPageTests extends BaseTest {
 
     @Test
     public void importantTasksTest() {
-        open("/order");
         mainPage.askOpen(1)
                 .checkRespond("Сутки — 400 рублей. Оплата курьеру — ")
                 .askOpen(2)
