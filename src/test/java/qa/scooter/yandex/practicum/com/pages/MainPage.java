@@ -6,29 +6,30 @@ import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 
 public class MainPage {
+    private SelenideElement cookiesConfirmButton = $("#rcc-confirm-button");
+
     private ElementsCollection askButtons = $$(".accordion__item"),
             askResponds = $$(".accordion__panel");
 
-    private SelenideElement cookiesConfirmButton = $("#rcc-confirm-button");
-
-    @Step("Изначально принимает куки")
-    public MainPage confirmCookies() {
-        cookiesConfirmButton.click();
+    @Step("Принятие cookies")
+    public MainPage acceptCookies() {
+        cookiesConfirmButton.shouldBe(visible).click();
         return this;
     }
 
-    @Step("Кликает и открывает вопрос по номеру")
-    public MainPage askOpen(int numberOfAsk) {
+    @Step("Клик по разделу '{numberOfAsk}'")
+    public MainPage openSection(int numberOfAsk) {
         numberOfAsk--;
         askButtons.get(numberOfAsk).click();
         return this;
     }
 
-    @Step("Проверяет после клика видимый текст")
-    public MainPage checkRespond(String value) {
+    @Step("Проверка текста после открытия раздела '{value}'")
+    public MainPage checkTextSection(String value) {
         askResponds = askResponds.filter(visible);
         askResponds.get(0).shouldHave(text(value));
         return this;

@@ -13,9 +13,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static qa.scooter.yandex.practicum.com.BaseTest.BASE_URL;
 
 public class OrderScooterPage {
+    private String orderNumber;
 
     CalendarComponent calendarComponent = new CalendarComponent();
-    private String orderNumber;
+
+    private SelenideElement
+            subwayStationInput = $(".select-search__value"),
+            orderContinueBtn = $x("//*[contains(text(),'Далее')]"),
+            rentalPeriodArrowBtn = $(".Dropdown-arrow"),
+            commentForCourierInput = $("[placeholder='Комментарий для курьера']"),
+            orderFullText = $x("//*[contains(text(),'Номер заказа:')]"),
+            checkStatusBtn = $x("//*[contains(text(),'Посмотреть статус')]"),
+            orderNumInContainer = $(".Input_Responsible__1jDKN"),
+            logoLocator = $(".Header_Logo__23yGT"),
+            orderMetroErrorMessage = $(".Order_MetroError__1BtZb"),
+            orderHeaderModal = $(".Order_ModalHeader__3FDaJ");
 
     private ElementsCollection orderButtons = $$(byText("Заказать")),
             inputContainers = $$("[type='text']").filterBy(visible),
@@ -25,18 +37,6 @@ public class OrderScooterPage {
             orderButtonInFilledForm = $$("button.Button_Button__ra12g.Button_Middle__1CSJM"),
             orderButtonInFullFilledForm = $$("div.Order_Modal__YZ-d3 button.Button_Button__ra12g.Button_Middle__1CSJM:last-of-type"),
             errorMessages = $$(".Input_ErrorMessage__3HvIb");
-
-    private SelenideElement
-            subwayStationInput = $(".select-search__value"),
-            orderContinueButton = $(byText("Далее")),
-            rentalPeriodArrowButton = $(".Dropdown-arrow"),
-            commentForCourierInput = $("[placeholder='Комментарий для курьера']"),
-            orderFullText = $(byText("Номер заказа:")),
-            orderNextButton = $(byText("Посмотреть статус")),
-            orderNumInContainer = $(".Input_Responsible__1jDKN"),
-            logoLocator = $(".Header_Logo__23yGT"),
-            orderMetroErrorMessage = $(".Order_MetroError__1BtZb"),
-            orderHeaderModal = $(".Order_ModalHeader__3FDaJ");
 
     @Step("Клик на кнопку заказа в шапке сайта")
     public OrderScooterPage clickHeaderButtonOrder() {
@@ -83,7 +83,7 @@ public class OrderScooterPage {
 
     @Step("Клик на кнопку 'Продолжить' в окне первой формы")
     public OrderScooterPage clickOrderContinue() {
-        orderContinueButton.click();
+        orderContinueBtn.click();
         return this;
     }
 
@@ -96,7 +96,7 @@ public class OrderScooterPage {
     @Step("Клик на поле и установка количества суток аренды")
     public OrderScooterPage chooseRentalPeriod(int periodInDays) {
         periodInDays--;
-        rentalPeriodArrowButton.click();
+        rentalPeriodArrowBtn.click();
         rentalPeriods.get(periodInDays).click();
         return this;
     }
@@ -140,7 +140,7 @@ public class OrderScooterPage {
 
     @Step("Клик на кнопку 'Посмотреть Статус'")
     public OrderScooterPage clickCheckOrder() {
-        orderNextButton.click();
+        checkStatusBtn.click();
         return this;
     }
 

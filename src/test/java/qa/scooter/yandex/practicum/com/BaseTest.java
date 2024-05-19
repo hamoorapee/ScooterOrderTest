@@ -13,10 +13,12 @@ public abstract class BaseTest {
     public static final String BASE_URL = "https://qa-scooter.praktikum-services.ru";
 
     @BeforeAll
-    public static void configure() {
+    public static void setup() {
         Configuration.baseUrl = BASE_URL;
         Configuration.browser = "firefox";
+        Configuration.headless = true;
+
         open(BASE_URL);
-        mainPage.confirmCookies();
+        mainPage.acceptCookies();
     }
 }

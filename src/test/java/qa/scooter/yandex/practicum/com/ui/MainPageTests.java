@@ -1,31 +1,33 @@
 package qa.scooter.yandex.practicum.com.ui;
 
-import jdk.jfr.Description;
+import io.qameta.allure.Epic;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import qa.scooter.yandex.practicum.com.BaseTest;
 
+import static qa.scooter.yandex.practicum.com.ExpectedText.*;
+
+@Epic("UI Автотесты")
 public class MainPageTests extends BaseTest {
 
     @Test
     @DisplayName("Проверка вопросов 'Вопросы о важном'")
-    @Description("Проверка выпадающих значений из вопросов после клика и корректность их содержания")
     public void importantTasksTest() {
-        mainPage.askOpen(1)
-                .checkRespond("Сутки — 400 рублей. Оплата курьеру — ")
-                .askOpen(2)
-                .checkRespond("Пока что у нас так: один заказ — один ")
-                .askOpen(3)
-                .checkRespond("Допустим, вы оформляете заказ на 8 ма")
-                .askOpen(4)
-                .checkRespond("Только начиная с завтрашнего дня. Но ")
-                .askOpen(5)
-                .checkRespond("Пока что нет! Но если что-то срочное —")
-                .askOpen(6)
-                .checkRespond("Самокат приезжает к вам с полной зарядк")
-                .askOpen(7)
-                .checkRespond("Да, пока самокат не привезли. Штрафа не")
-                .askOpen(8)
-                .checkRespond("Да, обязательно. Всем самокатов! И Моск");
+        mainPage.openSection(1)
+                .checkTextSection(TEXT_OF_THE_FIRST_SECTION.getText())
+                .openSection(2)
+                .checkTextSection(TEXT_OF_THE_SECOND_SECTION.getText())
+                .openSection(3)
+                .checkTextSection(TEXT_OF_THE_THIRD_SECTION.getText())
+                .openSection(4)
+                .checkTextSection(TEXT_OF_THE_FOURTH_SECTION.getText())
+                .openSection(5)
+                .checkTextSection(TEXT_OF_THE_FIFTH_SECTION.getText())
+                .openSection(6)
+                .checkTextSection(TEXT_OF_THE_SIXTH_SECTION.getText())
+                .openSection(7)
+                .checkTextSection(TEXT_OF_THE_SEVENTH_SECTION.getText())
+                .openSection(8)
+                .checkTextSection(TEXT_OF_THE_EIGHT_SECTION.getText());
     }
 }
