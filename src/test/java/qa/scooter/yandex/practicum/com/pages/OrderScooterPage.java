@@ -168,11 +168,13 @@ public class OrderScooterPage {
         orderMetroErrorMessage.shouldBe(visible);
         return this;
     }
+
     @Step("Проверяет готовность принять заказ")
     public OrderScooterPage checkAvailabilityCreateOrder(){
         orderHeaderModal.shouldBe(hidden);
         return this;
     }
+
     @Step("Очищает поле ввода даты")
     public OrderScooterPage cleanDateContainer(){
         calendarComponent.cleanDate();
