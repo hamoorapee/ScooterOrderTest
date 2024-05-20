@@ -13,7 +13,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static qa.scooter.yandex.practicum.com.BaseTest.BASE_URL;
 
 public class OrderScooterPage {
-    private String orderNumber;
 
     CalendarComponent calendarComponent = new CalendarComponent();
 
