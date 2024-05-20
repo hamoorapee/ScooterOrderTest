@@ -13,8 +13,7 @@ public class MainPageTests extends BaseTest {
     @Test
     @DisplayName("Проверка вопросов 'Вопросы о важном'")
     public void importantTasksTest() {
-        mainPage
-                .openSection(1)
+        mainPage.openSection(1)
                 .checkTextSection(TEXT_OF_THE_FIRST_SECTION.getText())
                 .openSection(2)
                 .checkTextSection(TEXT_OF_THE_SECOND_SECTION.getText())
