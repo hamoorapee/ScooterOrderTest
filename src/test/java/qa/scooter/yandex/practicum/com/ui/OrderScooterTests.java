@@ -3,84 +3,84 @@ package qa.scooter.yandex.practicum.com.ui;
 import io.qameta.allure.Epic;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import qa.scooter.yandex.practicum.com.BaseTest;
+import qa.scooter.yandex.practicum.com.TestData;
 
 import static com.codeborne.selenide.Selenide.open;
 
 @Epic("UI Автотесты")
-public class OrderScooterTests extends BaseTest {
+public class OrderScooterTests extends TestData {
 
     @Test
     @DisplayName("Проверка заказа самоката из кнопки в верхнем меню")
-    public void OrderScooterTestInHighButton(){
+    public void OrderScooterTestInHighButton() {
         orderScooterPage.clickHeaderButtonOrder()
-                .setFirstName("Николай")
-                .setSecondName("Хорошавцев")
-                .setAddress("Белинского 111")
-                .setSubwayStation("Черкизовская")
-                .setNum("999999999999")
-                .clickOrderContinue()
-                .setDataInCalendar("16","06","2024")
-                .clickAndChooseRentalPeriod(5)
-                .chooseScooterColor(1)
-                .setCommentForCourier("Привезите с собой воды")
-                .approveOrderInFilledForm()
-                .clickYesAtTheFinalOfForm()
-                .checkApproveCreatedOrder()
-                .getOrderNumber()
-                .clickCheckOrder()
-                .checkOrderNumber();
+                        .setFirstName(FIRST_NAME)
+                        .setLastName(LAST_NAME)
+                        .setAddress(ADDRESS)
+                        .setSubwayStation(SUBWAY_STATION)
+                        .setNum(PHONE_NUMBER)
+                        .clickOrderContinue()
+                        .setDataInCalendar(DAY, MONTH, YEAR)
+                        .clickAndChooseRentalPeriod(RENTAL_PERIOD)
+                        .chooseScooterColor(SCOOTER_COLOR)
+                        .setCommentForCourier(COMMENT)
+                        .approveOrderInFilledForm()
+                        .clickYesAtTheFinalOfForm()
+                        .checkApproveCreatedOrder()
+                        .getOrderNumber()
+                        .clickCheckOrder()
+                        .checkOrderNumber();
     }
 
     @Test
     @DisplayName("Проверка заказа самоката из кнопки в середине страницы")
-    public void OrderScooterTestInMiddleButton(){
+    public void OrderScooterTestInMiddleButton() {
         orderScooterPage.clickBigButtonOrder()
-                .setFirstName("Николай")
-                .setSecondName("Хорошавцев")
-                .setAddress("Белинского 111")
-                .setSubwayStation("Черкизовская")
-                .setNum("999999999999")
-                .clickOrderContinue()
-                .setDataInCalendar("16","06","2024")
-                .clickAndChooseRentalPeriod(5)
-                .chooseScooterColor(1)
-                .setCommentForCourier("Привезите с собой воды")
-                .approveOrderInFilledForm()
-                .clickYesAtTheFinalOfForm()
-                .checkApproveCreatedOrder()
-                .getOrderNumber()
-                .clickCheckOrder()
-                .checkOrderNumber();
+                        .setFirstName(FIRST_NAME)
+                        .setLastName(LAST_NAME)
+                        .setAddress(ADDRESS)
+                        .setSubwayStation(SUBWAY_STATION)
+                        .setNum(PHONE_NUMBER)
+                        .clickOrderContinue()
+                        .setDataInCalendar(DAY, MONTH, YEAR)
+                        .clickAndChooseRentalPeriod(RENTAL_PERIOD)
+                        .chooseScooterColor(SCOOTER_COLOR)
+                        .setCommentForCourier(COMMENT)
+                        .approveOrderInFilledForm()
+                        .clickYesAtTheFinalOfForm()
+                        .checkApproveCreatedOrder()
+                        .getOrderNumber()
+                        .clickCheckOrder()
+                        .checkOrderNumber();
     }
 
     @Test
     @DisplayName("Проверка корректности ссылки после клика на лого")
-    public void logoLinkToMain(){
+    public void logoLinkToMain() {
         open("/order");
         orderScooterPage.clickToLogo()
-                .checkUrl();
+                        .checkUrl();
     }
 
     @Test
     @DisplayName("Проверка заказа самоката с введением некорректных данных")
-    public void negativeTest(){
+    public void negativeTest() {
         open("/order");
         orderScooterPage.clickOrderContinue()
-                .setAddress("9")
-                .checkErrorMessages()
-                .setFirstName("Николай")
-                .setSecondName("Хорошавцев")
-                .setAddress("Белинского 111")
-                .setSubwayStation("Черкизовская")
-                .setNum("999999999999")
-                .clickOrderContinue()
-                .setDataInCalendar("16","06","2024")
-                .approveOrderInFilledForm()
-                .checkAvailabilityCreateOrder()
-                .cleanDateContainer()
-                .clickAndChooseRentalPeriod(4)
-                .approveOrderInFilledForm()
-                .checkAvailabilityCreateOrder();
+                        .setAddress("9")
+                        .checkErrorMessages()
+                        .setFirstName(FIRST_NAME)
+                        .setLastName(LAST_NAME)
+                        .setAddress(ADDRESS)
+                        .setSubwayStation(SUBWAY_STATION)
+                        .setNum(PHONE_NUMBER)
+                        .clickOrderContinue()
+                        .setDataInCalendar(DAY, MONTH, YEAR)
+                        .approveOrderInFilledForm()
+                        .checkAvailabilityCreateOrder()
+                        .cleanDateContainer()
+                        .clickAndChooseRentalPeriod(RENTAL_PERIOD)
+                        .approveOrderInFilledForm()
+                        .checkAvailabilityCreateOrder();
     }
 }
