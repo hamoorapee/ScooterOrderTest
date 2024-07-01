@@ -16,6 +16,8 @@ public class OrderScooterPage {
 
     CalendarComponent calendarComponent = new CalendarComponent();
 
+    String orderNumber;
+
     private SelenideElement
             firstNameInput = $("[placeholder='* Имя']"),
             lastNameInput = $("[placeholder='* Фамилия']"),
